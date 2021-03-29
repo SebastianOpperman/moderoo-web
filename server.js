@@ -1,15 +1,7 @@
-const fs = require('fs')
-const https = require('https')
 const express = require('express')
 const app = express()
-
-const certFiles = {
-  key: fs.readFileSync('./file.pem'),
-  cert: fs.readFileSync('./file.crt')
-}
-
-const server = https.createServer(certFiles, app);
-const io = require('socket.io')(server);
+const server = require('http').Server(app)
+const io = require('socket.io')(server)
 const { v4: uuidV4} = require('uuid')
 
 app.set('view engine', 'ejs')
