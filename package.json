@@ -1,0 +1,20 @@
+{
+  "name": "moderoo-web",
+  "version": "1.0.0",
+  "description": "The Moderoo web app prototype",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server": "nodemon server.js",
+    "peer": "peerjs --port 3001"
+  },
+  "author": "Sebastian Opperman",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "nodemon": "^2.0.7",
+    "socket.io": "^4.0.0",
+    "uuid": "^8.3.2"
+  }
+}
